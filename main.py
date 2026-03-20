@@ -45,35 +45,40 @@ def generate_playlist():
                     
                     title = a.get('title') or a.text.strip()
                     img = a.find('img')
-                    if img and not title:
-                        title = img.get('alt', '')
-                        
+                    logo_url = ''
+                    if img:
+                        if not title:
+                            title = img.get('alt', '')
+                        logo_url = img.get('src', '')
+                        if logo_url and not logo_url.startswith('http'):
+                            logo_url = f'https://www.jagobd.com{logo_url}' if logo_url.startswith('/') else f'https://www.jagobd.com/{logo_url}'
+                            
                     if not title:
                         continue
                         
                     if href not in channel_links:
-                        channel_links[href] = title.strip()
+                        channel_links[href] = (title.strip(), logo_url)
         except:
             pass
             
     results = []
     with ThreadPoolExecutor(max_workers=20) as executor:
-        futures = [executor.submit(extract_m3u8_from_page, session, href, title) for href, title in channel_links.items()]
+        futures = [executor.submit(extract_m3u8_from_page, session, href, title, logo) for href, (title, logo) in channel_links.items()]
         for future in futures:
             res = future.result()
             if res and res[1]:
                 results.append(res)
                 
     playlist = "#EXTM3U\n"
-    for title, url in results:
-        playlist += f'#EXTINF:-1 tvg-id="" tvg-name="{title}" tvg-logo="" group-title="JagoBD",{title}\n'
+    for title, url, logo in results:
+        playlist += f'#EXTINF:-1 tvg-id="" tvg-name="{title}" tvg-logo="{logo}" group-title="JagoBD",{title}\n'
         playlist += f'#EXTVLCOPT:http-referrer=https://www.jagobd.com/\n'
         playlist += f'#EXTVLCOPT:http-user-agent=Mozilla/5.0\n'
         playlist += f'{url}|Referer=https://www.jagobd.com/\n'
         
     return playlist
 
-def extract_m3u8_from_page(session, url, title):
+def extract_m3u8_from_page(session, url, title, logo):
     try:
         r = session.get(url, timeout=10)
         html = r.text
@@ -82,7 +87,7 @@ def extract_m3u8_from_page(session, url, title):
         if not iframe_match:
             m = re.search(r'(https?://[^\s\"\'<>]*\.m3u8[^\s\"\'<>]*)', html)
             if m:
-                return (title, m.group(1).replace('\\/', '/'))
+                return (title, m.group(1).replace('\\/', '/'), logo)
             return None
             
         embed_url = iframe_match.group(1)
@@ -95,7 +100,7 @@ def extract_m3u8_from_page(session, url, title):
         if not src_match:
             m = re.search(r'(https?://[^\s\"\'<>]*\.m3u8[^\s\"\'<>]*)', embed_html)
             if m:
-                return (title, m.group(1).replace('\\/', '/'))
+                return (title, m.group(1).replace('\\/', '/'), logo)
             return None
             
         func_name = src_match.group(1)
@@ -125,7 +130,7 @@ def extract_m3u8_from_page(session, url, title):
             if span_match:
                 base_url += span_match.group(1)
                 
-        return (title, base_url.replace('\\/', '/'))
+        return (title, base_url.replace('\\/', '/'), logo)
     except Exception:
         return None
 
