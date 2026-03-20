@@ -67,7 +67,9 @@ def generate_playlist():
     playlist = "#EXTM3U\n"
     for title, url in results:
         playlist += f'#EXTINF:-1 tvg-id="" tvg-name="{title}" tvg-logo="" group-title="JagoBD",{title}\n'
-        playlist += f'{url}\n'
+        playlist += f'#EXTVLCOPT:http-referrer=https://www.jagobd.com/\n'
+        playlist += f'#EXTVLCOPT:http-user-agent=Mozilla/5.0\n'
+        playlist += f'{url}|Referer=https://www.jagobd.com/\n'
         
     return playlist
 
