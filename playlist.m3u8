@@ -1,17 +1,17 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="" tvg-name="Asian TV" tvg-logo="https://www.jagobd.com/wp-content/uploads/2015/12/asiantv-150x150.jpg?x95285" group-title="JagoBD",Asian TV
+#EXTINF:-1 tvg-id="" tvg-name="Al Jazeera" tvg-logo="https://www.jagobd.com/wp-content/uploads/2019/09/AljazeeraTV-150x150.jpg?x95285" group-title="JagoBD",Al Jazeera
 #EXTVLCOPT:http-referrer=https://www.jagobd.com/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/asian-test-sample-ok-d.stream/playlist.m3u8?wmsAuthSign=|Referer=https://www.jagobd.com/
-#EXTINF:-1 tvg-id="" tvg-name="BTV National" tvg-logo="https://www.jagobd.com/wp-content/uploads/2017/08/btvctg.png?x95285" group-title="JagoBD",BTV National
+https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/aljazeera.stream/playlist.m3u8?wmsAuthSign=|Referer=https://www.jagobd.com/
+#EXTINF:-1 tvg-id="" tvg-name="Azan TV Canada" tvg-logo="https://www.jagobd.com/wp-content/uploads/2019/04/azantvs-150x150.jpg?x95285" group-title="JagoBD",Azan TV Canada
 #EXTVLCOPT:http-referrer=https://www.jagobd.com/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/btvnational1.stream/playlist.m3u8?wmsAuthSign=|Referer=https://www.jagobd.com/
-#EXTINF:-1 tvg-id="" tvg-name="Makkah Live" tvg-logo="https://www.jagobd.com/wp-content/uploads/2020/05/MakkahLive-150x150.jpg?x95285" group-title="JagoBD",Makkah Live
+https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/azantv.stream/playlist.m3u8?wmsAuthSign=|Referer=https://www.jagobd.com/
+#EXTINF:-1 tvg-id="" tvg-name="Islam Ch Bangla" tvg-logo="https://www.jagobd.com/wp-content/uploads/2024/08/icb-150x150.jpg?x95285" group-title="JagoBD",Islam Ch Bangla
 #EXTVLCOPT:http-referrer=https://www.jagobd.com/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/makkah.stream/playlist.m3u8?wmsAuthSign=|Referer=https://www.jagobd.com/
-#EXTINF:-1 tvg-id="" tvg-name="V2BEAT TV Europe" tvg-logo="https://www.jagobd.com/wp-content/uploads/2020/05/V2BEATTV-150x150.png?x95285" group-title="JagoBD",V2BEAT TV Europe
+https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/islamchbangla.stream/playlist.m3u8?wmsAuthSign=|Referer=https://www.jagobd.com/
+#EXTINF:-1 tvg-id="" tvg-name="JonmoBhumi TV |Australia" tvg-logo="https://www.jagobd.com/wp-content/uploads/2017/08/Jonmobhumi-Logo-2-150x120.jpg?x95285" group-title="JagoBD",JonmoBhumi TV |Australia
 #EXTVLCOPT:http-referrer=https://www.jagobd.com/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/v2beattv.stream/playlist.m3u8?wmsAuthSign=|Referer=https://www.jagobd.com/
+https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/jonmobhumitv.stream/playlist.m3u8?wmsAuthSign=|Referer=https://www.jagobd.com/
